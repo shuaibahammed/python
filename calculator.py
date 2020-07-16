@@ -14,9 +14,6 @@ text = StringVar()
 # we declare a variable as globally
 exp = ""
 
-
-
-
 # creating button
 button1 = Button(text="0", bg="black", fg="yellow", height=2, width=2)
 button2 = Button(text="1", bg="black", fg="yellow", height=2, width=2)
