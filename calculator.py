@@ -15,55 +15,6 @@ text = StringVar()
 exp = ""
 
 
-# function to display in screen
-def click(num):
-    global exp
-    exp = exp + str(num)
-    text.set(exp)
-
-
-# function for the equal button
-def equal():
-    global exp
-    total = str(eval(exp))
-    text.set(total)
-    exp = ""
-
-
-# function for clear
-def clear():
-    global exp
-    exp = ""
-    text.set("")
-
-
-# function for multiplication
-def multiply():
-    global exp
-    multiplication = str(eval(exp))
-    text.set(multiplication)
-    exp=""
-
-# function for division
-def div():
-    global exp
-    division = str(eval(exp))
-    text.set(division)
-    exp=""
-
-# function for subtration
-def sub():
-    global exp
-    subtration = str(eval(exp))
-    text.set(subtration)
-    exp=""
-
-# function for addition
-def add():
-    global exp
-    addition = str(eval(exp))
-    text.set(addition)
-    exp=""
 
 
 # creating button
