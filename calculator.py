@@ -1,3 +1,91 @@
+<<<<<<< HEAD
+# importing tkinter
+from tkinter import *
+
+# accesing tkinter to window
+window = Tk()
+
+# giving window display appearance
+window.geometry("270x250")
+window.title("Calculator")
+window_label=Label(window,text="CALCULATOR" ,font=("Helvetica", 10, 'italic'))
+window.configure(bg="yellow")
+window_label.grid(columnspan=10)
+
+
+# assign a class variable,we create an instance of this class
+text = StringVar()
+# we declare a variable as globally
+exp = ""
+
+
+# function to display in screen
+def click_button(num):
+    global exp
+    exp = exp + str(num)
+    text.set(exp)
+
+
+# function for the equal button
+def equal():
+    global exp
+    total = str(eval(exp))
+    text.set(total)
+    exp = ""
+
+
+# function for clear
+def clear():
+    global exp
+    exp = ""
+    text.set("")
+
+
+# creating a entry box for showing operations
+me_text = Entry(window, font=("Arial", 30), textvar=text, width=5, bd=4, bg="silver")
+me_text.grid(columnspan=4, ipadx=70)
+
+# creating buttonnot yet solved
+button1 = Button(window,text="0",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("0"))
+button2 = Button(window,text="1",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("1"))
+button3 = Button(window,text="2",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("2"))
+button4 = Button(window,text="3",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("3"))
+button5 = Button(window,text="4",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("4"))
+button6 = Button(window,text="5",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("5"))
+button7 = Button(window,text="6",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("6"))
+button8 = Button(window,text="7",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("7"))
+button9 = Button(window,text="8",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("8"))
+button10 = Button(window,text="9",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("9"))
+button11 = Button(window,text="+",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("+"))
+button12 = Button(window,text="-", bd=4,bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("-"))
+button13 = Button(window,text="*", bd=4,bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("*"))
+button14 = Button(window,text="/",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("/"))
+button15 = Button(window,text="=",bd=4, bg="black", fg="yellow", height=1, width=7,command=equal)
+button16 = Button(window,text=".",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda:click_button("."))
+button17 = Button(window,text="c",bd=4, bg="black", fg="yellow", height=1, width=7,command=lambda :clear())
+
+# alignment of buttons
+
+button1.grid(row=6, column=1)
+button2.grid(row=5, column=0)
+button3.grid(row=5, column=1)
+button4.grid(row=5, column=2)
+button5.grid(row=4, column=0)
+button6.grid(row=4, column=1)
+button7.grid(row=4, column=2)
+button8.grid(row=3, column=0)
+button9.grid(row=3, column=1)
+button10.grid(row=3, column=2)
+button11.grid(row=5, column=3)
+button12.grid(row=4, column=3)
+button13.grid(row=3, column=3)
+button14.grid(row=6, column=3)
+button15.grid(row=7, column=0,columnspan=6, ipadx=95,padx=10,pady=10)
+button16.grid(row=6, column=2)
+button17.grid(row=6, column=0)
+
+window.mainloop()
+=======
 # importing tkinter
 from tkinter import *
 
@@ -108,3 +196,4 @@ button16.grid(row=4, column=3)
 button17.grid(row=4, column=1)
 
 window.mainloop()
+>>>>>>> 308a349d9226d5c6baabb930753356063d7b1b2d
